@@ -1,17 +1,123 @@
 ---
 import { basics } from "@cv";
+import Section from "./Section.astro";
 
-const { name, label, image, location, profiles, phone, email } = basics
-const { city, region } = location
+const { name, label, image, location, summary, profiles, phone, email } =
+  basics;
+const { city, region, url, postalCode } = location;
+
+import Github from "../icons/Github.astro";
+import Linkedin from "../icons/Linkedin.astro";
+import Gmail from "../icons/Gmail.astro";
+import Phone from "../icons/Phone.astro";
+import World from "../icons/World.astro";
+
+const SOCIAL_ICONS: Record<string, any> = {
+  Github,
+  Linkedin,
+  Gmail,
+  Phone
+};
 ---
 
-<section>
-  <div class="container">
+<Section>
+  <div class="row">
     <div class="info">
       <h1>{name}</h1>
-      <h2>{label}</h2>
+      <p>{summary}</p>
+      <ul>
+        <li>
+          <a href={url} target="_blank"
+            ><World fill="#444" />{city}, {region}, {postalCode}</a>
+        </li>
+      </ul>
     </div>
+    <figure><img src={image} width="120" /></figure>
   </div>
-</section>
+  <footer>
+    <ul class="profiles">
+      {
+        profiles.map(({ network, url, username }) => {
+          const Icon = SOCIAL_ICONS[network];
+  
+          return (
+            <li>
+              <a href={url} target="_blank" class="profile">
+                <Icon fill="#444" />
+              </a>
+            </li>
+          );
+        })
+      }
+    </ul>
+  </footer>
+</Section>
 
-<style></style>
+<style>
+  .row {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    gap: 2em;
+  }
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    gap: 0.8em;
+    & p {
+      color: #555;
+    }
+  }
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: 2em;
+    color: #888;
+    font-size: 0.8em;
+    &.profiles {
+      margin-top: 2em;
+      justify-content: center;
+      gap: 2em;
+      & li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+        font-size: .8em;
+      }
+    }
+    & a.profile {
+      display: grid;
+      align-content: center;
+      padding: 0.6em;
+      aspect-ratio: 1/1;
+      border: 1px solid #8884;
+      border-radius: 0.4em;
+      transition: all ease 0.3s;
+      &:hover {
+        border: 1px solid #888;
+        box-shadow: 0 0 10px 0 #8884;
+      }
+    }
+  }
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 0.4em;
+    color: #888;
+    &:hover {
+      color: #444;
+    }
+  }
+  img {
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: 0 20;
+    border-radius: 0.6em;
+  }
+</style>

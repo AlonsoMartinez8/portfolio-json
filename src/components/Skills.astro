@@ -1,1 +1,62 @@
-<h2>Skills</h2>
+---
+import Java from "@/icons/Java.astro";
+import Section from "./Section.astro";
+import { skills } from "@cv";
+import JavaScript from "@/icons/JavaScript.astro";
+import React from "@/icons/React.astro";
+import NextJS from "@/icons/NextJS.astro";
+import Kotlin from "@/icons/Kotlin.astro";
+import AstroIcon from "@/icons/AstroIcon.astro";
+
+const ICONS: Record<string, any> = {
+  Java,
+  JavaScript,
+  React,
+  Kotlin,
+  NextJS,
+  AstroIcon,
+};
+---
+
+<Section>
+  <h2>Skills</h2>
+  <div class="row">
+    {
+      skills.map(({ name }) => {
+        const Icon = ICONS[name];
+
+        return (
+          <div class="card">
+            <Icon fill="#444" />
+          </div>
+        );
+      })
+    }
+  </div>
+</Section>
+
+<style>
+  h2 {
+    margin-bottom: 1em;
+  }
+  .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .card {
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px 1px #4444;
+    padding: .5em;
+    border-radius: 1em;
+  }
+  p {
+    text-align: center;
+    padding-bottom: 1em;
+    color: #777;
+  }
+</style>

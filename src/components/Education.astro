@@ -1,1 +1,61 @@
-<h2>Education</h2>
+---
+import Section from "./Section.astro";
+import { education } from "@cv";
+---
+
+<Section>
+  <h2>Education</h2>
+  <div class="rowg">
+    {
+      education.map(({ institution, area, studyType, startDate, endDate }) => {
+        return (
+          <div class="card">
+            <header class="rowf">
+              <>
+                <h3>{studyType}</h3>
+                <span class="area">{area}</span>
+              </>
+            </header>
+            <footer class="rowf">
+              <p>{institution}</p>
+              <p>
+                {startDate} - {endDate}
+              </p>
+            </footer>
+          </div>
+        );
+      })
+    }
+  </div>
+</Section>
+
+<style>
+  h2 {
+    margin-bottom: 1em;
+  }
+  .rowg {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1em;
+  }
+  .rowf {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .card {
+    padding: 1em 2em;
+    border-left: 4px solid #4444;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1em;
+  }
+  span.area {
+    font-size: smaller;
+    border: 1px solid #444;
+    color: #444;
+    padding: 0.4em 1em;
+    border-radius: 4em;
+  }
+</style>

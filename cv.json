@@ -1,110 +1,152 @@
 {
-    "basics": {
-      "name": "Alonso Martínez",
-      "label": "Desarrollador Multiplataforma",
-      "image": "",
-      "email": "alonsomartinez0804@gmail.com",
-      "phone": "+34 624 51 51 26",
-      "url": "",
-      "summary": "A summary of John Doe…",
-      "location": {
-        "address": "2712 Broadway St",
-        "postalCode": "CA 94115",
-        "city": "San Francisco",
-        "countryCode": "US",
-        "region": "California"
-      },
-      "profiles": [{
-        "network": "Twitter",
-        "username": "john",
-        "url": "https://twitter.com/john"
-      }]
+  "basics": {
+    "name": "Alonso Martínez",
+    "label": "Desarrollador Multiplataforma",
+    "image": "./public/fotoCarnet.jpg",
+    "email": "alonsomartinez0804@gmail.com",
+    "phone": "624 51 51 26",
+    "url": "",
+    "summary": "Técnico Superior en Desarrollo de Aplicaciones Multiplataforma, fullstack y apasionado del desarrollo",
+    "location": {
+      "address": "C/ Rio Tietar",
+      "postalCode": "45007",
+      "city": "Toledo",
+      "countryCode": "ES",
+      "region": "España",
+      "url": "https://www.google.com/maps/place/Santa+Mar%C3%ADa+de+Benquerencia+(Pol%C3%ADgono),+45007+Toledo/@39.8671721,-3.9483622,15z/data=!3m1!4b1!4m6!3m5!1s0xd6a09023d9064d3:0x8bad298ab840614b!8m2!3d39.8654079!4d-3.9495889!16s%2Fg%2F11x9l47z8?entry=ttu"
     },
-    "work": [{
-      "name": "Company",
-      "position": "President",
-      "url": "https://company.com",
-      "startDate": "2013-01-01",
-      "endDate": "2014-01-01",
-      "summary": "Description…",
-      "highlights": [
-        "Started the company"
+    "profiles": [
+      {
+        "network": "Github",
+        "username": "alonsomartinez8",
+        "url": "https://github.com/AlonsoMartinez8"
+      },
+      {
+        "network": "Linkedin",
+        "username": "Alonso Martínez Aceituno",
+        "url": "https://www.linkedin.com/in/alonso-mart%C3%ADnez-aceituno-a232a82b3/"
+      },
+      {
+        "network": "Gmail",
+        "username": "alonsomartinez0804@gmail.com",
+        "url": "mailto:alonsomartinez0804@gmail.com"
+      },
+      {
+        "network": "Phone",
+        "username": "624515126",
+        "url": "tel:+34624515126"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Sould Park Bowling",
+      "position": "Monitor",
+      "startDate": "11/12/2023",
+      "endDate": "actualidad",
+      "summary": "Monitor, Mantenimiento y Atención al Cliente"
+    },
+    {
+      "name": "Don G",
+      "position": "Cocinero",
+      "startDate": "01/09/2023",
+      "endDate": "01/12/2023",
+      "summary": "Hostelería, Restauración y Atención al cliente"
+    },
+    {
+      "name": "Burger King",
+      "position": "Encargado",
+      "startDate": "07/07/2022",
+      "endDate": "01/08/2023",
+      "summary": [
+        "Hostelería, Restauración, Atención al cliente y Gestión de producto"
       ]
-    }],
-    "volunteer": [{
-      "organization": "Organization",
-      "position": "Volunteer",
-      "url": "https://organization.com/",
-      "startDate": "2012-01-01",
-      "endDate": "2013-01-01",
-      "summary": "Description…",
-      "highlights": [
-        "Awarded 'Volunteer of the Month'"
+    }
+  ],
+  "education": [
+    {
+      "institution": "I.E.S. Azarquiel",
+      "area": "Desarrollo de Aplicaciones Multiplataforma",
+      "studyType": "Grado Superior",
+      "startDate": "01/09/2022",
+      "endDate": "01/06/2024"
+    },
+    {
+      "institution": "I.E.S. Juanelo Turriano",
+      "area": "Ciencias Tecnológicas",
+      "studyType": "Bachillerato",
+      "startDate": "01/09/2020",
+      "endDate": "01/06/2022"
+    }
+  ],
+  "projects": [
+    {
+      "name": "myColors",
+      "image": "./public/myColors.png",
+      "description": "Creador de Paletas de Colores con JS, HTML y CSS",
+      "url": "https://alonsomartinez8.github.io/myColors-PaletteMaker/",
+      "repository": "https://github.com/AlonsoMartinez8/myColors-PaletteMaker",
+      "techs": [
+        { "name": "JavaScript" },
+        { "name": "HTML" },
+        { "name": "CSS" }
       ]
-    }],
-    "education": [{
-      "institution": "University",
-      "url": "https://institution.com/",
-      "area": "Software Development",
-      "studyType": "Bachelor",
-      "startDate": "2011-01-01",
-      "endDate": "2013-01-01",
-      "score": "4.0",
-      "courses": [
-        "DB1101 - Basic SQL"
+    },
+    {
+      "name": "Currency Exchanger",
+      "image": "./public/currencyExchanger.png",
+      "description": "Intercambio de moneda con ReactNative y Expo",
+      "url": "https://github.com/AlonsoMartinez8/currencyExchanger",
+      "repository": "https://github.com/AlonsoMartinez8/currencyExchanger",
+      "techs": [
+        { "name": "ReactNative" },
+        { "name": "Expo" }
       ]
-    }],
-    "awards": [{
-      "title": "Award",
-      "date": "2014-11-01",
-      "awarder": "Company",
-      "summary": "There is no spoon."
-    }],
-    "certificates": [{
-      "name": "Certificate",
-      "date": "2021-11-07",
-      "issuer": "Company",
-      "url": "https://certificate.com"
-    }],
-    "publications": [{
-      "name": "Publication",
-      "publisher": "Company",
-      "releaseDate": "2014-10-01",
-      "url": "https://publication.com",
-      "summary": "Description…"
-    }],
-    "skills": [{
-      "name": "Web Development",
-      "level": "Master",
-      "keywords": [
-        "HTML",
-        "CSS",
-        "JavaScript"
+    },
+    {
+      "name": "Currency Exchanger",
+      "image": "./public/OpenWeatherSAXWeb.png",
+      "description": "Web climática JSP. Datos interpretados por SAX del XML de OpenWeatherMap",
+      "url": "https://github.com/AlonsoMartinez8/WeatherSAXWeb",
+      "repository": "https://github.com/AlonsoMartinez8/WeatherSAXWeb",
+      "techs": [
+        { "name": "Java" },
+        { "name": "JSP" },
+        { "name": "SAX" },
+        { "name": "XML" }
       ]
-    }],
-    "languages": [{
-      "language": "English",
-      "fluency": "Native speaker"
-    }],
-    "interests": [{
-      "name": "Wildlife",
-      "keywords": [
-        "Ferrets",
-        "Unicorns"
+    },
+    {
+      "name": "Pokemon Memory Game",
+      "image": "./public/pokemonMemoryGame.jpg",
+      "description": "Juego de memoria  de Pokemon con Kotlin en Android Studio",
+      "url": "https://github.com/AlonsoMartinez8/PokemonMemoryGame",
+      "repository": "https://github.com/AlonsoMartinez8/PokemonMemoryGame",
+      "techs": [
+        { "name": "Kotlin" },
+        { "name": "Android" },
+        { "name": "Gradle" }
       ]
-    }],
-    "references": [{
-      "name": "Jane Doe",
-      "reference": "Reference…"
-    }],
-    "projects": [{
-      "name": "Project",
-      "startDate": "2019-01-01",
-      "endDate": "2021-01-01",
-      "description": "Description...",
-      "highlights": [
-        "Won award at AIHacks 2016"
-      ],
-      "url": "https://project.com/"
-    }]
-  }
+    }
+  ],
+  "skills":[
+    {
+      "name":"Java"
+    },
+    {
+      "name":"JavaScript"
+    },
+    {
+      "name":"React"
+    },
+    {
+      "name":"Kotlin"
+    },
+    {
+      "name":"AstroIcon"
+    },
+    {
+      "name":"NextJS"
+    }
+  ]
+}

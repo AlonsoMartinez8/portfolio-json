@@ -1,1 +1,95 @@
-<h2>Projects</h2>
+---
+import Github from "@/icons/Github.astro";
+import Link from "@/icons/Link.astro";
+import Section from "./Section.astro";
+import { projects } from "@cv";
+---
+
+<Section>
+  <h2>Proyectos</h2>
+  <div class="rowg">
+    {
+      projects.map(({ name, description, url, techs, image, repository }) => {
+        return (
+          <div class="card">
+            <header>
+              <img src={image} width="100"/>
+              <h3>{name}</h3>
+              <ul class="rowf">
+                {
+                  techs.map(({name})=>{
+                    return(
+                      <span class="tech">{name}</span>
+                    )
+                  })
+                }  
+              </ul>
+            </header>
+            <main>
+              
+              <p>{description}</p>
+            </main>
+            <footer class="rowf">
+              <a href={repository} target="_blank"><Github fill="#444"/> Repository</a>
+              <a href={url} target="_blank"><Link fill="#444"/></a>
+            </footer>
+          </div>
+        );
+      })
+    }
+  </div>
+</Section>
+
+<style>
+  h2 {
+    margin-bottom: 1em;
+  }
+  .rowg {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+  }
+  .rowf {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: .2em;
+  }
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .5em;
+    & img {
+      width: 100%;
+      height: 200px;
+      object-fit: contain;
+    }
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1em;
+  }
+  span.tech {
+    font-size: smaller;
+    border: 1px solid #444;
+    color: #444;
+    padding: 0.4em 1em;
+    border-radius: 4em;
+  }
+  a {
+    color: #444;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .4em 1em;
+    &:hover {
+      border-bottom: 1px solid #444;
+      margin-bottom: -1px;
+    }
+  }
+</style>
