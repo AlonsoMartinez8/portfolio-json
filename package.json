@@ -1,8 +1,11 @@
 {
   "name": "portfolio-json",
+  "homepage": "https://AlonsoMartinez8.github.io/portfolio-json",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro check && astro build",
@@ -10,8 +13,11 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.3.1",
     "@astrojs/check": "^0.4.1",
+    "astro": "^4.3.1",
     "typescript": "^5.3.3"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
   }
 }
