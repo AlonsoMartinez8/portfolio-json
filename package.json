@@ -1,11 +1,8 @@
 {
   "name": "portfolio-json",
-  "homepage": "https://AlonsoMartinez8.github.io/portfolio-json",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro check && astro build",
